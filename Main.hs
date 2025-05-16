@@ -75,7 +75,7 @@ formatRational r = show (numerator r) ++ "/" ++ show (denominator r)
 printList :: String -> [Rational] -> IO ()
 printList title xs = do
   putStrLn $ "\n=== " ++ title ++ " ==="
-  let rows = chunksOf 10 (map formatRational (take 20 xs))
+  let rows = chunksOf 10 (map formatRational (take 50 xs))
   mapM_ (putStrLn . unwords) rows
 
 -- Helper to chunk list into pieces of n elements
